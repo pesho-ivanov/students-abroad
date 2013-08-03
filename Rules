@@ -24,10 +24,17 @@ compile '*' do
     filter :erb
     layout 'default'
   end
+
+  case item[:extension]
+    when 'html'
+      filter :relativize_paths, :type => :html
+    when 'css'
+      filter :relativize_paths, :type => :css
+  end
 end
 
 route '/stylesheet/' do
-  '/css/style.css'
+  '/style.css'
 end
 
 route '*' do
