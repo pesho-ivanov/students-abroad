@@ -21,16 +21,22 @@ compile '*' do
   if item.binary?
     # don’t filter binary items
   else
-    filter :erb
+    case item[:extension]
+      when 'html'
+        filter :relativize_paths, :type => :html
+      when 'css'
+        filter :relativize_paths, :type => :css
+      #when 'md'
+      else
+        filter :erb
+        filter :kramdown, :auto_ids => false
+      #else
+      #  filter :erb
+    end
+
     layout 'default'
   end
 
-  case item[:extension]
-    when 'html'
-      filter :relativize_paths, :type => :html
-    when 'css'
-      filter :relativize_paths, :type => :css
-  end
 end
 
 route '/stylesheet/' do
