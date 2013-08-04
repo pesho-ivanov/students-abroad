@@ -10,6 +10,11 @@
   </head>
   <body>
     <div id="main">
+      <%=  
+        if @item.identifier != '/' && @item.parent.identifier == '/blogs/'
+          render 'author'
+        end %>
+
       <%= yield %>
     </div>
     <div id="sidebar">

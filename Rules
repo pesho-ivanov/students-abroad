@@ -13,9 +13,18 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
+# COMPILE
+
 compile '/stylesheet/' do
   # don’t filter or layout
 end
+
+#compile '/blogs/*/' do
+#  filter :erb
+#  filter :kramdown, :auto_ids => false  
+#
+#  layout 'author'
+#end
 
 compile '*' do
   if item.binary?
@@ -30,14 +39,14 @@ compile '*' do
       else
         filter :erb
         filter :kramdown, :auto_ids => false
-      #else
-      #  filter :erb
     end
 
     layout 'default'
   end
 
 end
+
+# ROUTE
 
 route '/stylesheet/' do
   '/style.css'
