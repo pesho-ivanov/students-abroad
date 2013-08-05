@@ -105,6 +105,17 @@ a:hover {
   top: -15px;
 }
 
+#main #author-photo {
+  position: relative;
+  #display: block;
+  max-width: 150px;
+  float: left;
+
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ccc;
+}
+
 #main #author-info {
   position: relative;
   left: 10px;
@@ -112,10 +123,12 @@ a:hover {
 
 #main #author-info ul li {
   list-style-type: none;
+  font-style: italic;
+  left: 10px;
 }
 
 #main #author-info #name {
-  font-family: Courier;
+  #font-family: Courier;
   font-weight: bold;
   font-size: 24px;
 }
@@ -126,15 +139,11 @@ a:hover {
   #padding-left: 10px
 }
 
-#main #photo {
-  position: relative;
-  #display: block;
-  max-width: 150px;
-  float: left;
-
-  border-style: solid;
-  border-width: 1px;
-  border-color: #ccc;
+#main #author-info #blog {
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: underline;
+  left: 30px;
 }
 
 #antispam {
