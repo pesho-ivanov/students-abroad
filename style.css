@@ -7,6 +7,10 @@
 
 body {
   background: #fff;
+  position: fixed;
+  #left: 100px;
+  left: 50%;
+  margin-left: -470px;
 }
 
 a {
@@ -25,8 +29,8 @@ a:hover {
 #main {
   position: absolute;
   top: 40px;
-  left: 280px;
-  width: 500px;
+  left: 270px;
+  width: 600px;
 }
 
 #main h1 {
@@ -52,6 +56,7 @@ a:hover {
 }
 
 #main ul li {
+  font-weight: bold;
   list-style-type: square;
 }
 
@@ -60,6 +65,7 @@ a:hover {
   top: 40px;
   left: 20px;
   width: 200px;
+  height: 600px;
   padding: 20px 20px 0 0;
   border-right: 1px solid #ccc;
   text-align: right;
@@ -75,7 +81,8 @@ a:hover {
 
 #sidebar ul {
   list-style-type: none;
-  margin: 20px 0;
+  margin-top: 8px;
+  margin-bottom: 25px;
 }
 
 #sidebar li {
@@ -88,15 +95,25 @@ a:hover {
   top: -15px;
 }
 
+#sidebar #banner img {
+  width: 130px;
+}
+
 #about-title {
+  padding-right: 20px;
   font-weight: bold;
   font-size: 24px;
+  color: #2952CC;
+  display: inline-block;
+  border-bottom: 1px solid #ccc;
 }
 
 #main #author-photo {
   position: relative;
   #display: block;
-  max-width: 150px;
+  #max-width: 150px;
+  height: 200px;
+  width: auto;
   float: left;
 
   border-style: solid;
@@ -105,34 +122,88 @@ a:hover {
 }
 
 #main #author-info {
-  position: relative;
-  left: 10px;
-}
-
-#main #author-info ul li {
-  list-style-type: none;
-  #font-style: italic;
-  left: 10px;
+  position: absolute;
+  left: 170px;
+  right: 0px;
+  height: 200px;
 }
 
 #main #author-info #name {
-  #font-family: Courier;
+  padding-right: 20px;
   font-weight: bold;
   font-size: 24px;
+  display: inline-block;
+  border-bottom: 1px solid #ccc;
 }
 
 #main #author-info #email {
+  position: relative;
+  left: 10px;
   font-size: 14px;
   color: #333;
   font-style: italic;
-  #padding-left: 10px
 }
 
-#main #author-info #blog {
+#main #author-info #studies {
+  position: absolute;
+  font-size: 16px; 
+  font-weight: bold; 
+  bottom: 5px;
+}
+
+#main #author-info #studies #subject {
+  padding-right: 10px;
+  position: relative;
+  color: #2952CC;
+  #line-height: 40px;
+  bottom: 10px;
+  display: inline-block;
+  border-bottom: 1px solid #ccc;
+}
+
+#main #author-info #studies #university,
+#main #author-info #studies #country {
+}
+
+#feed {
+  position: absolute;
+  top: 210px; 
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+}
+
+#feed-container {
+  position: relative;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+#feed-title {
+  position: relative;
   font-weight: bold;
-  font-size: 20px;
-  text-decoration: underline;
-  left: 30px;
+  left: 15px;
+  right: 15px;
+}
+
+#feed-title #feed-subtitle {
+  position: relative;
+  color: #aaa;
+  #color: #f90;
+  font-weight: normal;
+  font-size: 12px;
+  font-style: italic;
+  vertical-align: super;
+  #letter-spacing: -1px;
+}
+
+#feed-subtitle, #feed-title {
+  display: inline;
+}
+
+#feed-content {
+  font-style: italic;
 }
 
 #antispam {
